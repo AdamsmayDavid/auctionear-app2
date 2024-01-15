@@ -21,17 +21,19 @@
         <script src="assets/js/main.js"></script>
         
     <style>
-        #picturebox{
-        width: 80%
-        background-color: grey;
-        color: white;
-        }
-
+      
+      .table-primary{
+        border:white solid;
+        background-color:#FF6C22;
+      }
+      .table-trans{
+        border:white solid;
+      }
     
     </style>
     </head>
 
-    <body>
+    <body class="">
         
               <!-- nav -->
               <nav id="NavBar" class="navbar sticky-top navbar-expand-lg navbar-trans bg-light p-4 ">
@@ -52,7 +54,7 @@
                     <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         Vehicle
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-dark bg-primary">
+                    <ul class="dropdown-menu dropdown-menu-primary bg-primary">
                         <li><a class="dropdown-item" href="/sellerMotorcycle">Motorcycle</a></li>
                         <li><a class="dropdown-item" href="/sellerSedan">Sedan</a></li>
                         <li><a class="dropdown-item" href="/sellerSuv">Suv</a></li>
@@ -69,7 +71,7 @@
                                 &nbsp;{{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end  bg-primary" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-primary dropdown-menu-end  bg-primary" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item text-light2" href="#">
                                         {{ __('Message') }}
                                     </a>
@@ -88,8 +90,52 @@
                             </li>
           </ul>
         </nav>
-
-        <h1 class="text-center">ADMIN PANEL</h1>
+                    <section class="container mt-5">
+                    <nav class="navbar bg-body-tertiary">
+                        <div class="container-fluid">
+                            <h1><a class="btn btn-outline-primary text-light active" href="">Users</a><a class="btn btn-primary mx-2" href="">Active Users</a></h1>
+                            <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-primary" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col" class="table-primary">Id</th>
+                            <th scope="col" class="table-primary">Full Name</th>
+                            <th scope="col" class="table-primary">Contact Number</th>
+                            <th scope="col" class="table-primary">email</th>
+                            <th scope="col" class="table-primary text-center">Ban user</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row" class="table-trans">1</th>
+                            <td class="table-trans">Mark</td>
+                            <td class="table-trans">Otto</td>
+                            <td class="table-trans">@mdo</td>
+                            <td class="btn btn-primary btn-sm col-12"> Ban-user</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td class="btn btn-primary btn-sm col-12"> Ban-user</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td class="btn btn-primary btn-sm col-12"> Ban-user</td>
+                            
+                            </tr>
+                            
+                        </tbody>
+                        </table>
+                    </section>
 
             
     </body>
