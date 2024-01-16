@@ -51,6 +51,23 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
         return view('biddersVan');
      });
 
+     // for seller
+     Route::get('/sellerBiddingPage', function () {
+      return view('sellerBiddingPage');
+   });
+
+
+     //For bidders
+     Route::get('/biddingPage', function () {
+      return view('biddingPage');
+   });
+
+
+      //For admin
+      Route::get('/activateUsers', function () {
+         return view('activateUsers');
+      });
+
    
 //Admin Routes List
 Route::middleware(['auth', 'user-access:admin'])->group(function () {

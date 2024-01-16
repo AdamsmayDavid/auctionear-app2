@@ -24,6 +24,7 @@
         <style>
             .btn{
                 background-color:#FF6C22;
+                border:none;
                 
             }
             .btn:hover{
@@ -89,53 +90,32 @@
                             </li>
           </ul>
         </nav>
-        <center>
-            <h1 class=" mt-5" style="color:#FF6C22;" href="">VAN</h1>
-    <div class="container-md mt-5">
-        <div class="row text-dark align-items-center ">
-            <div class="container text-center ">
-    <div class="row gy-3 mb-4">
-        <div class="col-sm-6 col-md-6 col-lg-3">
-        <img src="assets/images/red.jpg" class="img-fluid" />
-        <div class="col bg-trans">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
-        <div class="d-grid">
-        <a class="btn  mt-2 text-light" href="/sellerBid" role="button">Bid</a>
-        </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3">
-        <img src="assets/images/red.jpg" class="img-fluid" />
-        <div class="col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
-        <div class="d-grid">
-        <a class="btn  mt-2 text-light" href="cluxery" role="button">Bid</a>
-        </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3">
-        <img src="assets/images/red.jpg" class="img-fluid" />
-        <div class="col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
-        <div class="d-grid">
-        <a class="btn  mt-2 text-light" href="cstandard" role="button">Bid</a>
-        </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3">
-        <img src="assets/images/red.jpg" class="img-fluid" />
-        <div class="col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
-        <div class="d-grid">
-        <a class="btn  mt-2 text-light" href="cstandard" role="button">Bid</a>
-        </div>
-        </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </center>
+        <div class="container mt-5">
+            <h1 class="text-center" style="color:#FF6C22;">VAN</h1>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="card">
+                    <img src="assets/images/red.jpg" class="card-img-top" alt="Item 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 1</h5>
+                        <p class="card-text">Description </p>
+                        <p class="card-text">Recent Bid: </p>
+                        <a href="/biddingPage" class="btn btn-primary">View</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                    <img src="assets/images/red.jpg" class="card-img-top" alt="Item 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 2</h5>
+                        <p class="card-text">Description .</p>
+                        <p class="card-text">Recent Bid:</p>
+                        <a href="#" class="btn btn-primary">View</a>
+                    </div>
+                    </div>
+                </div>
 
      <!-- script file -->
      <script src="assets/js/jquery.min.js"></script>

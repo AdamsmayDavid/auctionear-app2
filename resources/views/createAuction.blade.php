@@ -82,90 +82,55 @@
                             </li>
           </ul>
         </nav>
-        <div class=" container mt-5">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-header text-light bg-primary">{{ __('Create Auction') }}</div>
-
-                                <div class="card-body">
-                                    <form method="POST" action="{{ route('register') }}">
-                                        @csrf
-
-                                        <div class="row mb-3">
-                                            <!-- VEHICLE NAME -->
-                                            <div class="col-md-12">
-                                                <div class="form-floating row mb-2">
-                                                    <input class="form-control border-primary" type ="text" placeholder="Leave a comment here" id="vehicleName">
-                                                     <label for="vehicleName">Vehicle Name</label>
-                                                 </div>
-                                            </div>
-                                             <!-- VEHICLE NAME END -->
-                                        </div>
-                                        <div class="row mb-3">
-                                            <!-- VEHICLE PICTURES UPLOAD -->
-                                            <div class="col-md-12">
-                                                <div class="form-floating row mb-2">
-                                                    <input class="form-control border-primary" type="file" placeholder="Leave a comment here" id="vehicleName">
-                                                     <label for="vehicleName">Vehicle Pictures</label>
-                                                 </div>
-                                            </div>
-                                             <!-- VEHICLE PICTURES UPLOAD END -->
-                                        </div>
-                                        
-                                         <!-- VEHICLE DESCRIPTIONS -->
-                                        <div class="form-floating row mb-4 col-md-12 m-auto">
-                                            <textarea class="form-control border-primary" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                                            <label for="floatingTextarea2">Vehicle Descriptions</label>
-                                        </div>
-                                             <!-- VEHICLE DESCRIPTIONS END -->
-
-                                        <div class="row mb-3">
-                                               <!-- VEHICLE DATE -->
-                                            <div class="col-md-6">                                           
-                                                <div class="form-floating row mb-2">
-                                                    <input class="form-control border-primary" type="date" placeholder="Leave a comment here" id="Date">
-                                                     <label for="Date">Date</label>
-                                                 </div>
-                                            </div>
-                                                   <!-- VEHICLE DATE END -->
-
-                                                <!-- VEHICLE TIME -->
-                                            <div class="col-md-6">                                           
-                                                <div class="form-floating row mb-2">
-                                                    <input class="form-control border-primary" type="time" placeholder="Leave a comment here" id="Time">
-                                                     <label for="Time">Time</label>
-                                                 </div>
-                                            </div>
-                                             <!-- VEHICLE TIME END-->
-                                        </div>
-                                        <div class="row">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text text-primary rounded-0"> <h2>₱</h2></span>
-                                            </div>
-                                            <div class="form-floating row mb-2">
-                                            <input type="number" class="form-control border-primary" placeholder="Leave a comment here" id="Time">
-                                            <label for="Time">Starting Price</label>
-                                            </div>
-                                        </div>
-
-                                       
-
-                                        <div class="post row mb-0">
-                                            <div class="col-md-14 offset-md-">
-                                                <button type="submit" class="btn btn-primary col-md-12">
-                                                    {{ __('Post') }}
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="container mt-5">
+                    <h2 class=" text-primary">Create Auction</h2>
+                    <form id="auctionForm">
+                    <div class="mb-3">
+                        <label for="itemName" class="form-label">Item Name</label>
+                        <input type="text" class="form-control" id="itemName" placeholder="Enter item name" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" rows="3" placeholder="Enter item description" required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="startingPrice" class="form-label">Starting Price</label>
+                        <input type="number" class="form-control" id="startingPrice" placeholder="Enter starting price" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="auctionDate" class="form-label">Auction Date</label>
+                        <input type="date" class="form-control" id="auctionDate" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="auctionTime" class="form-label">Auction Time</label>
+                        <input type="time" class="form-control" id="auctionTime" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="imageUpload" class="form-label">Upload Images (up to 4)</label>
+                        <input type="file" class="form-control" id="imageUpload" accept="image/*" multiple onchange="validateFileUpload()">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg col-12 " >Post</button>
+                    </form>
                 </div>
-         
+
+                <!-- for images only 4 can upload -->
+            <script>
+                function validateFileUpload() {
+                var input = document.getElementById('imageUpload');
+                var files = input.files;
+
+                if (files.length > 4) {
+                    alert('Please select up to 4 images.');
+                    input.value = '';
+                }
+                }
+            </script>
             <!-- script file -->
             <script src="assets/js/jquery.min.js"></script>
             <script src="assets/js/owlcarousel/owl.carousel.min.js"></script>

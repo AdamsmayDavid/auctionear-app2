@@ -93,7 +93,7 @@
                     <section class="container mt-5">
                     <nav class="navbar bg-body-tertiary">
                         <div class="container-fluid">
-                            <h1><a class="btn btn-outline-primary text-light active" href="/admin/home">Users</a><a class="btn btn-primary mx-2" href="/activateUsers">Active Users</a></h1>
+                            <h1><a class="btn btn-outline-primary text-light active" href="/admin/home">Users</a><a class="btn btn-primary mx-2" href="">Active Users</a></h1>
                             <form id="searchForm">
                               <div class="input-group mb-3">
                                 <input type="text" class="form-control" id="searchInput" placeholder="Search for...">
@@ -106,62 +106,105 @@
                         <thead>
                             <tr>
                             <th scope="col" class="table-primary">Id</th>
+                            <th scope="col" class="table-primary text-center">Credentials</th>
                             <th scope="col" class="table-primary">Full Name</th>
                             <th scope="col" class="table-primary">Contact Number</th>
                             <th scope="col" class="table-primary">email</th>
-                            <th scope="col" class="table-primary text-center">Ban user</th>
+                            <th scope="col" class="table-primary text-center">Activate User</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                             <th scope="row" class="table-trans">1</th>
+                            <td class="btn btn-primary col-12 btn-sm" onclick="viewCredentials()"> View </td>
                             <td class="table-trans">Mark</td>
                             <td class="table-trans">Otto</td>
                             <td class="table-trans">@mdo</td>
-                            <td class="btn btn-danger col-12 btn-sm" onclick="showBanAlert()">Ban This User</td>
+                            <td class="btn btn-primary col-12 btn-sm" onclick="showActivateAlert()">Activate users</td>
                             </tr>
                             
                             
                         </tbody>
                         </table>
+                        
                     </section>
+                    
 
-              
-    <script>
-    function showBanAlert() {
-        // Create an alert
-        var banAlert = `
-            <div class="alert alert-danger alert-dismissible fade show fixed-top" role="alert">
-                Are you sure you want to ban this user? 
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                <button type="button" class="btn btn-danger btn-md " onclick="banUser()">Ban</button>
-            </div>
-        `;
+                                            <script>
+                            function showActivateAlert() {
+                                // Create an alert
+                                var activateAlert = `
+                                    <div class="alert alert-success alert-dismissible fade show fixed-top" role="alert">
+                                        Are you sure you want to activate these users? <br>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        <button type="button" class="btn btn-success" onclick="activateUsers()">Activate</button>
+                                        <button type="button" class="btn btn-danger" onclick="declineActivation()">Decline</button>
+                                    </div>
+                                `;
 
-        // Append the alert to the body
-        document.body.insertAdjacentHTML('beforeend', banAlert);
-    }
+                                // Append the alert to the body
+                                document.body.insertAdjacentHTML('beforeend', activateAlert);
+                            }
 
-    function banUser() {
-        // Perform the ban action (you can implement server-side logic here)
+                            function activateUsers() {
+                                // Perform the activate action (you can implement server-side logic here)
 
-        // Close the alert
-        document.querySelector('.alert').remove();
-        
-        // Optionally, you can display a confirmation message
-        alert('User has been banned.');
-    }
-</script>
+                                // Close the alert
+                                document.querySelector('.alert').remove();
+                                
+                                // Optionally, you can display a confirmation message
+                                alert('Users have been activated.');
+                            }
 
-<!-- seach engine -->
-<script>
-    function search() {
-      var searchQuery = document.getElementById('searchInput').value;
-      alert('Searching for: ' + searchQuery);
-      // You can replace the alert with your actual search functionality here
-    }
-  </script>
+                            function declineActivation() {
+                                // Handle the decline action (you can implement server-side logic here)
 
+                                // Close the alert
+                                document.querySelector('.alert').remove();
+                                
+                                // Optionally, you can display a message
+                                alert('Activation declined.');
+                            }
+                        </script>
+
+
+                        <!-- search engine -->
+                        <script>
+                            function search() {
+                            var searchQuery = document.getElementById('searchInput').value;
+                            alert('Searching for: ' + searchQuery);
+                            // You can replace the alert with your actual search functionality here
+                            }
+                        </script>
+
+                        <!-- for credentials view -->
+                        <script>
+                        function viewCredentials() {
+                        // Replace the following with the actual user information
+                        var name = 'John Doe';
+                        var address = '123 Main St, Cityville';
+                        var age = 25;
+                        var email = 'john.doe@example.com';
+                        var contactNumber = '+1 555-1234';
+                        var validIdUrl = 'assets/images/red.jpg'; // Replace with the actual URL
+
+                        var credentials = `
+                            <p><strong>Name:</strong> ${name}</p>
+                            <p><strong>Address:</strong> ${address}</p>
+                            <p><strong>Age:</strong> ${age}</p>
+                            <p><strong>Email:</strong> ${email}</p>
+                            <p><strong>Contact Number:</strong> ${contactNumber}</p>
+                            <p><strong>Valid ID:</strong> <a href="${validIdUrl}" target="_blank">View Valid ID</a></p>
+                        `;
+
+                        var popupWindow = window.open('', '_blank', 'width=400,height=500,scrollbars=yes,resizable=yes');
+                        popupWindow.document.write('<html><head><title>User Information</title></head><body>');
+                        popupWindow.document.write('<h2>User Information</h2>');
+                        popupWindow.document.write(credentials);
+                        popupWindow.document.write('</body></html>');
+                        popupWindow.document.close();
+                        }
+                    </script>
                     
 
             

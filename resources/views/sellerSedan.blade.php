@@ -89,54 +89,43 @@
                             </li>
           </ul>
         </nav>
-        <center>
-            <h1 class="text-primary mt-5" href="/seller/home">SEDAN</h1>
-    <div class="container-md mt-5">
-        <a href="/createAuction" class="btn col-md-4 mb-3 btn-lg btn-primary" action="#" >CREATE AUCTION</a>
-        <div class="row text-dark align-items-center ">
-            <div class="container text-center ">
-    <div class="row gy-3 mb-4">
-        <div class="col-sm-6 col-md-6 col-lg-3">
-        <img src="assets/images/red.jpg" class="img-fluid" />
-        <div class="col bg-trans">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
-        <div class="d-grid">
-        <a class="btn btn-primary mt-2" href="cvintage" role="button">View</a>
-        </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3">
-        <img src="assets/images/red.jpg" class="img-fluid" />
-        <div class="col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
-        <div class="d-grid">
-        <a class="btn  btn-primary mt-2" href="cluxery" role="button">View</a>
-        </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3">
-        <img src="assets/images/red.jpg" class="img-fluid" />
-        <div class="col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
-        <div class="d-grid">
-        <a class="btn  btn-primary mt-2" href="cstandard" role="button">View</a>
-        </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3">
-        <img src="assets/images/red.jpg" class="img-fluid" />
-        <div class="col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
-        <div class="d-grid">
-        <a class="btn  btn-primary mt-2" href="cstandard" role="button">View</a>
-        </div>
-        </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </center>
+        <div class="container mt-5">
+            <h1 class="text-center text-primary">MOTORCYCLE</h1>
+                <!-- creation btn for seller -->
+                <nav class="navbar bg-body-tertiary">
+                        <div class="container-fluid">
+                            <a class="btn btn-outline-primary btn-lg text-light active" href="">Create Auction</a>
+                            <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-primary" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+             <!-- creation btn for seller end-->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <div class="col">
+                    <div class="card">
+                    <img src="assets/images/red.jpg" class="card-img-top" alt="Item 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 1</h5>
+                        <p class="card-text">Description </p>
+                        <p class="card-text">Recent Bid: </p>
+                        <a href="/sellerBiddingPage" class="btn btn-primary">View</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                    <img src="assets/images/red.jpg" class="card-img-top" alt="Item 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 2</h5>
+                        <p class="card-text">Description .</p>
+                        <p class="card-text">Recent Bid:</p>
+                        <a href="#" class="btn btn-primary">View</a>
+                    </div>
+                    </div>
+                </div>
 
      <!-- script file -->
      <script src="assets/js/jquery.min.js"></script>

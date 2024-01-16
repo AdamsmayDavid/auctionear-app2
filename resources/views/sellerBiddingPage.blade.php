@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+    
+    <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Bidport" content="width=device-width, initial-scale=1">
 
-        <title>Big Bike</title>
+        <title>Auctionear</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,23 +21,25 @@
         <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
         <script src="assets/js/main.js"></script>
         
-    <style>
-        #picturebox{
-        width: 80%
-        background-color: grey;
-        color: white;
-        }
+        <style>
+            /* .btn{
+                background-color:#FF6C22;
+                
+            }
+            .btn:hover{
+                background-color:#FF6C40;
 
-    
-    </style>
+            } */
+         
+           
+        </style>
     </head>
-
-    <body>
-        
-              <!-- nav -->
-              <nav id="NavBar" class="navbar sticky-top navbar-expand-lg navbar-trans bg-light p-4 ">
+    <body class="antialiased "> 
+                      
+                <!-- nav -->
+                <nav id="NavBar" class="navbar sticky-top navbar-expand-lg navbar-trans bg-light p-4 ">
       <div class="container">
-        <a class="navbar-brand text-primary" href="/seller/home"><b>Auctio<span style="color:#FF6C22;">near</span></b> </a>
+        <a class="navbar-brand text-primary" href="/seller/home "><b>Auctio<span style="color:#FF6C22;">near</span></b> </a>
         <button id="TogglerIcon" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -70,7 +73,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end  bg-primary" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item text-light2" href="#">
+                                    <a class="dropdown-item text-light " href="#">
                                         {{ __('Message') }}
                                     </a>
                                 
@@ -88,36 +91,70 @@
                             </li>
           </ul>
         </nav>
-        <h1 class="text-center">View page <br>
-        alikepa agawa eke itanamung keka tapus edit kunemu salamat</h1>
-       
-        <!-- <h3 class="text-light"> <span class="text-warning">{{ Auth::user()->name }}</span></h3> -->
-   <!-- <div class="container mt-4"> -->
-      <!-- <h1 class="text-light mb-4" >Vintage Car</h1> -->
-      <!-- <div class="row text-light align-items-center">
-        <div class="container text-center">
-  <div class="row gy-3t">  
-    <div class="col-sm-6 col-md-6 col-lg-8">
-    <h1 class="text-primary mb-4" hre="/home#">Vintage Car</h1>
-      <img src="assets/images/red.jpg" class="img-fluid" />
-      <div class="col bg-trans">
-      <p class="text-dark"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
+        <H1 class="text-center text-primary">AUCTION PAGE</H1>
+        <div class="container mt-5">
+    <div id="biddingCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/red.jpg" class="d-block w-100" alt="Bidding Item Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/red.jpg" class="d-block w-100" alt="Bidding Item Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/red.jpg" class="d-block w-100" alt="Bidding Item Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/red.jpg" class="d-block w-100" alt="Bidding Item Image 4">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#biddingCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#biddingCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="col-sm-3 col-md-3 col-lg-3">
-    <h1 class="text-warning mb-4" hre="/home#">Vintage Car</h1>
-      <img src="assets/images/red.jpg" class="img-fluid" />
-      <div class="col bg-trans">
-      A vintage car is, in the most general sense, an old automobile, and in the narrower senses of car enthusiasts and collectors, it is a car from the period of 1919 to 1930. 
-      </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">ITEM NAME</h5>
+            <p class="card-text">Description of the bidding item goes here. You can provide details about the item and any other relevant information.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <!-- <li class="list-group-item">
+                <div class="input-group">
+                    <span class="input-group-text">Your Bid:</span>
+                    <input type="text" class="form-control" placeholder="Enter your bid amount">
+                    <button class="btn btn-primary">Place Bid</button>
+                </div>
+            </li> -->
+            <li class="list-group-item">
+                <p class="mb-0">Current Highest Bid: $100</p>
+            </li>
+            <li class="list-group-item">
+                <p class="mb-0">Bidding Ends: January 31, 2024</p>
+            </li>
+            <li class="list-group-item">
+                <p class="mb-0">Bidders:</p>
+                <ul>
+                    <li>adams- $150</li>
+                    <li>adams - $120</li>
+                    <li>adams - $100</li>
+                </ul>
+            </li>
+        </ul>
     </div>
-  </div>
 </div>
-</div>
-</div> -->
+
+     <!-- script file -->
+     <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/owlcarousel/owl.carousel.min.js"></script>
+            <script src="assets/js/main.js"></script>
 
 
-</body>
-</html>
+    </body>
+    </html>
 
-  

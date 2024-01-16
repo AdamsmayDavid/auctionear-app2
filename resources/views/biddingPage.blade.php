@@ -22,15 +22,14 @@
         <script src="assets/js/main.js"></script>
         
         <style>
-            .btn{
+            /* .btn{
                 background-color:#FF6C22;
-                border:none;
                 
             }
             .btn:hover{
                 background-color:#FF6C40;
 
-            }
+            } */
          
            
         </style>
@@ -90,32 +89,66 @@
                             </li>
           </ul>
         </nav>
+        <H1 class="text-center" style="color:#FF6C22;">AUCTION PAGE</H1>
         <div class="container mt-5">
-        <h1 class="text-center" style="color:#FF6C22;">SUV</h1>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                <div class="col">
-                    <div class="card">
-                    <img src="assets/images/red.jpg" class="card-img-top" alt="Item 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Item 1</h5>
-                        <p class="card-text">Description </p>
-                        <p class="card-text">Recent Bid: </p>
-                        <a href="/biddingPage" class="btn btn-primary">View</a>
-                    </div>
-                    </div>
-                </div>
+    <div id="biddingCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/red.jpg" class="d-block w-100" alt="Bidding Item Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/red.jpg" class="d-block w-100" alt="Bidding Item Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/red.jpg" class="d-block w-100" alt="Bidding Item Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/red.jpg" class="d-block w-100" alt="Bidding Item Image 4">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#biddingCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#biddingCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
-                <div class="col">
-                    <div class="card">
-                    <img src="assets/images/red.jpg" class="card-img-top" alt="Item 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Item 2</h5>
-                        <p class="card-text">Description .</p>
-                        <p class="card-text">Recent Bid:</p>
-                        <a href="#" class="btn btn-primary">View</a>
-                    </div>
-                    </div>
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">ITEM NAME</h5>
+            <p class="card-text">Description of the bidding item goes here. You can provide details about the item and any other relevant information.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="input-group">
+                    <span class="input-group-text">Your Bid:</span>
+                    <input type="text" class="form-control" placeholder="Enter your bid amount">
+                    <button class="btn btn-primary">Place Bid</button>
                 </div>
+            </li>
+            <li class="list-group-item">
+                <p class="mb-0">Current Highest Bid: $100</p>
+            </li>
+            <li class="list-group-item">
+                <p class="mb-0">Bidding Ends: January 31, 2024</p>
+            </li>
+            <li class="list-group-item">
+                <p class="mb-0">Bidders:</p>
+                <ul>
+                    <li>adams- $150</li>
+                    <li>adams - $120</li>
+                    <li>adams - $100</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="card-body">
+            <button class="btn btn-danger">Cancel Bid</button>
+        </div>
+    </div>
+</div>
 
      <!-- script file -->
      <script src="assets/js/jquery.min.js"></script>
